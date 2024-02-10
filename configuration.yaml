@@ -13,3 +13,4 @@ mqtt:
   sensor: !include_dir_merge_list sensor/
 shell_command:
   git_push: bash /config/shell/push.sh
+  git_pull: bash /config/shell/push.sh
