@@ -14,3 +14,4 @@ mqtt:
 shell_command:
   git_push: bash /config/shell/push.sh
   git_pull: bash /config/shell/pull.sh
+
