@@ -15,3 +15,13 @@ shell_command:
   git_push: bash /config/shell/push.sh
   git_pull: bash /config/shell/pull.sh
   git_unstaged: bash /config/shell/unstaged.sh
+template:
+  - trigger:
+      - platform: time_pattern
+        minutes: /1
+    action:
+      - service: shell_command.git_unstaged
+        response_variable: resp_data
+    sensor:
+      - name: "config_unstaged"
+        state: "{{ resp_data['stdout'] }}"
