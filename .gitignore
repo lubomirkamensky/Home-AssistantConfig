@@ -4,6 +4,7 @@
 !*.yaml
 !.gitignore
 !sensor
+!shell
 !blueprints
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
