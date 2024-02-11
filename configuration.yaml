@@ -24,4 +24,5 @@ template:
         response_variable: resp_data
     sensor:
       - name: "config_unstaged"
+        unique_id: sensor_config_unstaged_files_num
         state: "{{ resp_data['stdout'] }}"
