@@ -10,4 +10,4 @@
   - service: mqtt.publish
     data:
       topic: "config/git_pull/datetime"
-      payload: "{{ as_timestamp(now()) }}"
+      payload: "test"
