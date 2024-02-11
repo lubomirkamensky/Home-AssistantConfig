@@ -1,2 +1,3 @@
 - name: 'Config GitPull DateTime'
+  unique_id: sensor_config_gitpull_datetime
   state_topic: 'config/git_pull/datetime'
