@@ -11,7 +11,7 @@
     data:
       topic: "config/git_pull/datetime"
       payload: "{{ now() }}"
-- alias: Button to push chanfges to GitHub 
+- alias: Button to push changes to GitHub 
   id: github-push-button
   trigger:
     platform: state

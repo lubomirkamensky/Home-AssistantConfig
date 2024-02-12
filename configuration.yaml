@@ -26,7 +26,6 @@ template:
       - name: "config_unstaged"
         unique_id: sensor_config_unstaged_files_num
         state: "{{ resp_data['stdout'] }}"
-    sensor:
       - name: "config_synced_with_github"
         unique_id: sensor_config_synced_with_github
         state: "{{ 'NE' if  states.sensor.lubomirkamensky_home_assistantconfig_posledni_commit.last_changed > (states.sensor.config_gitpull_datetime.last_changed + timedelta(minutes=2)) else 'ANO' }}"
