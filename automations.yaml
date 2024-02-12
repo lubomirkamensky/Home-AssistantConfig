@@ -6,8 +6,8 @@
     for: "00:00:15"
   action:
   - service: shell_command.git_push
+  - service: homeassistant.reload_all
   - service: mqtt.publish
     data:
       topic: "config/git_pull/datetime"
       payload: "{{ now() }}"
-  - service: homeassistant.reload_all
