@@ -1,3 +1,37 @@
 - name: 'Config GitPull DateTime'
   unique_id: sensor_config_gitpull_datetime
   state_topic: 'config/git_pull/datetime'
+- name: 'Water level (Studna)'
+  state_topic: 'gardenopenhub/studna/distance'
+  value_template: '{{(400 - value|float)|round(1)}}'
+  unit_of_measurement: 'cm'
+- name: 'Teplota venku'
+  unique_id: sensor_ulmus_temperature
+  state_topic: 'node/ulmus/thermometer/0:0/temperature'
+  value_template: '{{value}}'
+  unit_of_measurement: '°C'
+- name: 'Vlhkost venku'
+  unique_id: sensor_ulmus_humidity
+  state_topic: 'node/ulmus/hygrometer/0:4/relative-humidity'
+  value_template: '{{value}}'
+  unit_of_measurement: '%'
+- name: 'Teplota doma'
+  unique_id: sensor_quercus_temperature
+  state_topic: 'node/quercus/thermometer/0:0/temperature'
+  value_template: '{{value}}'
+  unit_of_measurement: '°C'
+- name: 'Vlhkost doma'
+  unique_id: sensor_quercus_humidity
+  state_topic: 'node/quercus/hygrometer/0:4/relative-humidity'
+  value_template: '{{value}}'
+  unit_of_measurement: '%'
+- name: 'Tlak vzduchu doma'
+  unique_id: sensor_quercus_pressure
+  state_topic: 'node/quercus/barometer/0:0/pressure'
+  value_template: '{{value}}'
+  unit_of_measurement: 'kPa'
+- name: 'CO2 doma'
+  unique_id: sensor_quercus_co2-meter
+  state_topic: 'node/quercus/co2-meter/-/concentration'
+  value_template: '{{value}}'
+  unit_of_measurement: 'ppm'
