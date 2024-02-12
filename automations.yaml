@@ -1,6 +1,5 @@
 - alias: Config Folder sync with GitHub 
   id: config-folder-sync
-
   trigger:
     platform: template
     value_template: "{{ states.sensor.lubomirkamensky_home_assistantconfig_posledni_commit.last_changed > (states.sensor.config_gitpull_datetime.last_changed + timedelta(minutes=2)) }}"
