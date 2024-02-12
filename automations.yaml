@@ -11,4 +11,3 @@
     data:
       topic: "config/git_pull/datetime"
       payload: "{{ now() }}"
-
