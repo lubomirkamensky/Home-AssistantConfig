@@ -10,3 +10,4 @@
     data:
       topic: "config/git_pull/datetime"
       payload: "{{ now() }}"
+  - service: homeassistant.reload_all
