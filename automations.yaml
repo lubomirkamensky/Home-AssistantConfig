@@ -3,11 +3,11 @@
 
   trigger:
     platform: template
-    value_template: "{{ as_timestamp(states.sensor.lubomirkamensky_home_assistantconfig_posledni_commit.last_changed) > as_timestamp(states.sensor.sensor.config_gitpull_datetime.last_changed) }}"
-    for: "00:00:15"
+    value_template: "{{ as_timestamp(states.sensor.lubomirkamensky_home_assistantconfig_posledni_commit.last_changed) > as_timestamp(states.sensor.config_gitpull_datetime.last_changed) }}"
+    for: "00:30:00"
   action:
   - service: shell_command.git_push
   - service: mqtt.publish
     data:
       topic: "config/git_pull/datetime"
-      payload: "test"
+      payload: "{{ now() }}"
