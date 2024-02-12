@@ -11,3 +11,10 @@
     data:
       topic: "config/git_pull/datetime"
       payload: "{{ now() }}"
+- alias: Button to push chanfges to GitHub 
+  id: github-push-button
+  trigger:
+    platform: state
+    entity_id: input_button.git_push
+  action:
+  - service: shell_command.git_push
