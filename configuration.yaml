@@ -11,6 +11,8 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 mqtt:
   sensor: !include sensor/mqtt.yaml
+  
+
 shell_command:
   git_push: bash /config/shell/push.sh
   git_pull: bash /config/shell/pull.sh
